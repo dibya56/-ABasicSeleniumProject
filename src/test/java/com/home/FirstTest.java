@@ -10,7 +10,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import junit.framework.Assert;
 
 public class FirstTest {
@@ -20,7 +19,6 @@ public class FirstTest {
 	@BeforeTest
 	public void startUp() throws IOException {
 		Properties prop = PropertyManager.readPropertiesFile("Resources.properties");
-		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get(prop.getProperty("url"));
 	}
