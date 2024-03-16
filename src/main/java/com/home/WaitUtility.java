@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class WaitUtility {
 	
 	public WebElement waitForElement(WebDriver driver, By by) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		WebDriverWait wait = new WebDriverWait(driver, 30);
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 	}
 
